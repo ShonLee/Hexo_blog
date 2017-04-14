@@ -252,7 +252,7 @@ http://blog.liuxianan.com/windows-port-bind.html
 
 ![](http://i4.buimg.com/567571/1efb03acc7d55a73.png)<br>
 
-然后在浏览器中输入http://qq00964.github.io/就行了，我的 github 的账户叫qq00964 ,把这个改成你 github 的账户名就行了
+然后在浏览器中输入`http://qq00964.github.io` 就行了，我的 github 的账户叫qq00964 ,把这个改成你 github 的账户名就行了
 
 ![](http://i4.buimg.com/567571/af52da6be4d1326f.png)<br>
 

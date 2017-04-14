@@ -4,7 +4,8 @@
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
- 博客首页: /home
+ # 博客首页: /home
+ 博客首页: /
  作品展示: /works
  我的相册:  /photo
  给我留言: /about

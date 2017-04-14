@@ -143,6 +143,7 @@ require([], function (){
     $(".archive-article-title").attr("target", "_blank");
 });	
 
+// 博客相册的JS
 if($(".instagram").length) {
     require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
         obj.init();

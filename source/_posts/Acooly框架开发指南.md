@@ -44,14 +44,33 @@ acooly框架为方便统一封装，提高代码质量和开发效率，我们�
 
 为了方便自动生成结构性代码，对数据库表结构设计进行部分约定，但都符合常规习惯。
 
-* 表名全部小写，不能以数字开头，必须添加备注
+* 建议表名全部小写，不能以数字开头，必须添加备注
 * 每个表必须有以id命名的物理主键，且为数字类型，如：mysql为bigint, oracle为number。
-* 列名称全部小写，不能以数字开头；如果存在多个自然单词的组合，使用下划线分隔(_)。如：`user_type`
+* 建议列名称全部小写，不能以数字开头；如果存在多个自然单词的组合，使用下划线分隔(_)。如：`user_type`
 * 列定义必须添加备注 （这个备注则为生成的页面及表单的label）
 * 每个表必须添加`create_time`和`update_time`两个日期时间类型的字段，但无需手动管理 （在save/update时，框架会自己维护创建时间和最后修改时间）。
 * 如果有选项类型的字段，其选项值使用类json格式写入列备注字段，自动生成工具会自动为该列对应的属性和页面生成选项。如：表列为：`user_type` ,备注可以为：用户类型 `{normal:普通,vip:高级}`
 
->特别注意，强烈要求选项类（自动生成枚举类的）字段项目全局唯一名称，否则会生成enum名称相同的枚举相互覆盖。
+**<font color="red">特别注意1:</font>**<br>
+强烈要求选项类（自动生成枚举类的）字段项目全局唯一名称，否则会生成enum名称相同的枚举相互覆盖。<br>
+
+**<font color="red">特别注意2:</font>**<br>
+当多个自然单词组合时,组合单词中不能只有一个字母,错误例子: `F_PHONE` F只有一个字母,后台CRUD时会发生提示报错 
+
+	could not execute statement; 
+	SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException:
+	could not execute statement
+
+![](http://i2.muimg.com/567571/967ecaa4aa4d3bd3.png)
+
+eclipse也会报错`ORA00904: "": 标识符无效 `如下图:
+
+![](http://i4.buimg.com/567571/7069e2479769e3cb.png)
+
+**<font color="red">切记:</font>**<br>
+<font color="red">组合单词中不能只有一个字母</font><br>
+正确例子: ` FPHONE `  ` FA_PHONE `  ` FA_PHONE_AB`
+
 
 ## 程序设计规范
 

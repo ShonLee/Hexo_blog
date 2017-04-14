@@ -8,4 +8,5 @@ noDate: 'true'
   <ul class="img-box-ul"></ul>
  </section>
 </div>
+
 <script src="/js/photo.js"></script>

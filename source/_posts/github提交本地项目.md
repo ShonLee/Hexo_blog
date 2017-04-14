@@ -33,7 +33,7 @@ reward: true
 
 `git add .` //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点(`add 和 . `之间有空格)就把当前目录下所有未追踪的文件全部add了 
 
-`git commit -m "first commit"` //把文件提交到仓库,""当中的内容为对本次提交的说明信息,请尽量写上,以便于后期查看
+`git commit -m "first commit"` //把文件提交到本地仓库,`""`当中的内容为对本次提交的说明信息,请尽量写上,以便于后期查看
 
 `git remote add origin git@github.com:ShonLee/Me.git `//关联远程仓库
 
@@ -89,6 +89,13 @@ reward: true
 
     git remote add origin git@github.com:ShonLee/Me.git
 
+**可能会出错(应该是当前使用的名字 `origin `已被占用的意思)，信息如下**
+
+![](http://i2.muimg.com/567571/79e7ea5d8c10461d.png)
+
+执行指令`git remote rm origin` 即可解决这个错误
+
+
 ### 4 上传本地代码
 
 
@@ -140,6 +147,8 @@ reward: true
 	git push -u origin master
 
 ![借用他人的图片](http://static.open-open.com/lib/uploadImg/20160203/20160203214852_768.png)
+
+![](http://i1.piimg.com/567571/c6e1c86a7b64d3c1.png)
 
 
 然后刷新github，你会看到，原来没有的文件夹出来了。
